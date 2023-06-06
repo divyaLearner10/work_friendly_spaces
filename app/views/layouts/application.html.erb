@@ -16,7 +16,7 @@
      <%= render "shared/flashes" %>
      <%= yield %>
      <% if user_signed_in? %>
-     <h2> Hi <%= current_user.email %></h2>
+     <h2> Hi <%= current_user.email %></h2>  <% # work on how to visualy display this message! %>
      <% end %>
   </body>
 </html>
