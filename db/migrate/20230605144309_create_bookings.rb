@@ -6,8 +6,8 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.string :card_number
       t.string :cvc
       t.integer :number_of_guests
-      t.references :users, null: false, foreign_key: true
-      t.references :renting_spaces, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
+      t.references :renting_space, null: false, foreign_key: true
 
       t.timestamps
     end

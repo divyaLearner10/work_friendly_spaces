@@ -12,8 +12,18 @@
 
   </head>
 
+
   <body>
+<<<<<<< HEAD
   <%= render "shared/navbar" %>
     <%= yield %>
+=======
+     <%= render "shared/navbar" %>
+     <%= render "shared/flashes" %>
+     <%= yield %>
+     <% if user_signed_in? %>
+     <h2> Hi <%= current_user.email %></h2>  <% # work on how to visualy display this message! %>
+     <% end %>
+>>>>>>> 819bdf0fb67a54fa8b354bd6b388d31d2410542d
   </body>
 </html>
