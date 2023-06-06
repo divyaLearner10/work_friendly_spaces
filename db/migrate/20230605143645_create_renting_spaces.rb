@@ -5,7 +5,7 @@ class CreateRentingSpaces < ActiveRecord::Migration[7.0]
       t.string :address
       t.string :amenities
       t.boolean :internet
-      t.references :users, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

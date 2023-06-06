@@ -20,12 +20,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_152303) do
     t.string "card_number"
     t.string "cvc"
     t.integer "number_of_guests"
-    t.bigint "users_id", null: false
-    t.bigint "renting_spaces_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "renting_space_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["renting_spaces_id"], name: "index_bookings_on_renting_spaces_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["renting_space_id"], name: "index_bookings_on_renting_space_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "renting_spaces", force: :cascade do |t|
@@ -33,10 +33,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_152303) do
     t.string "address"
     t.string "amenities"
     t.boolean "internet"
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["users_id"], name: "index_renting_spaces_on_users_id"
+    t.index ["user_id"], name: "index_renting_spaces_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_152303) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "renting_spaces", column: "renting_spaces_id"
-  add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "renting_spaces", "users", column: "users_id"
+  add_foreign_key "bookings", "renting_spaces"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "renting_spaces", "users"
 end
