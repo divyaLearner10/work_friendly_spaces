@@ -18,16 +18,25 @@
 # user5 = User.new(first_name: "", last_name: "", email: "", password: "", phone_number: "", address: "")
 # user5.save!
 # puts 'Finished!'
+puts "Cleaning Data Base"
+RentingSpace.destroy_all
+User.destroy_all
+user1 = User.create!(email: "alex@gmail.com", password: "123456")
+user2 = User.create!(email: "kar@gmail.com", password: "123456")
+user3 = User.create!(email: "dyvia@gmail.com", password: "123456")
+user4 = User.create!(email: "christophe@gmail.com", password: "123456")
 
-# puts 'Creating 50 fake renting_spaces..'
-# 50.times do
-#   renting_space = RentingSpace.new(
-#     name: Faker::Company.name,
-#     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
-#     amenities: "#{Faker::House.room}, #{Faker::House.furniture}",
-#     user_id: rand(1..2),
-#     internet: true
-#   )
-#   renting_space.save!
-# end
-# puts 'Finished!'
+users = [user1, user2, user3, user4]
+
+puts 'Creating 50 fake renting_spaces..'
+50.times do
+  renting_space = RentingSpace.create!(
+    name: Faker::Company.name,
+    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    amenities: "#{Faker::House.room}, #{Faker::House.furniture}",
+    user_id: users.sample.id,  # users.sample.id
+    internet: true,
+  )
+  renting_space.save!
+  puts 'Finished!'
+end
