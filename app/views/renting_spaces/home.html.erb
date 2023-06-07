@@ -1,16 +1,64 @@
-<div class="container">
-  <div class="row">
-    <div class="cards">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
+  <div class="container">
+    <h1>HiveStay: Your Hive Away from Home!</h1>
+    <div class="form">
+    </div>
+  </div>
+</div>
+
+<div class="description-section">
+  <div class="container">
+    <!-- Description about hivestay -->
+    <div class="card-description">
+      <div class="card-body">
+        <%= image_tag('logo-3.png') %>
+        <h1>Elevate Your Stay, Elevate Your Life!</h1>
+        <p>
+          Hivestay is a groundbreaking platform that redefines the concept of remote work and leisure.
+          It offers specialized spaces tailored to the needs of remote workers and digital nomads,
+          providing a seamless blend of productivity and enjoyment. With carefully curated listings,
+          top-notch amenities, and a vibrant community, Hivestay creates an environment where individuals
+          can find their perfect workspace and embrace a fulfilling work-life balance.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="new-rentingspace-section">
+  <div class="container">
+   <div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4 class="card-title">Supercharge the Remote Work Experience: Add Your Hive to Hivestay!</h4>
+        <p class="card-text">
+          Become a driving force in the future of remote work by adding your unique Hive to Hivestay.
+          Join our thriving community and offer a space where professionals can find the perfect blend of productivity, comfort, and inspiration.
+        </p>
+        <%=link_to "Add your hive", new_renting_space_path, class: "btn btn-gradient" %>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          class="card-img" alt="...">
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<div class="rentingspace-section">
+  <div class="container">
+    <h1>Hivestays We Love</h1>
+    <div class="card-group">
       <% @renting_spaces.each do |renting_space| %>
-        <div class="card">
-          <!--TODO
-          <%= link_to renting_space_path(renting_space.id), class: "card-img-top" do %>
-            <%= image_tag "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" %>
-          <% end %> -->
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" class="card-img-top" alt=<%= renting_space.name %>>
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
+                  class="card-img-top" alt=<%= renting_space.name %>>
           <div class="card-body">
-            <h5 class="card-title"><%= renting_space.name %></h5>
-            <p class="card-text"><%= renting_space.address %></p>
+            <h4 class="card-title"><%= renting_space.name %></h4>
+            <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
           </div>
         </div>
       <% end %>
