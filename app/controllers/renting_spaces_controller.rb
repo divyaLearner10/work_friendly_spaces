@@ -3,7 +3,8 @@ class RentingSpacesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def home
-    @renting_spaces = RentingSpace.all
+    renting_spaces = RentingSpace.all
+    @renting_spaces = renting_spaces[0..3]
   end
 
   def index
