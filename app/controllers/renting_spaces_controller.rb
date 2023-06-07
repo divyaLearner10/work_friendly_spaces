@@ -1,6 +1,6 @@
 class RentingSpacesController < ApplicationController
   before_action :set_renting_space, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:home, :index, :new, :create, :show]
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def home
     @renting_spaces = RentingSpace.all
@@ -21,7 +21,9 @@ class RentingSpacesController < ApplicationController
   def create
     @renting_space = RentingSpace.new(rentingspaces_params)
     @renting_space.user = current_user
-    @renting_space.save
+    @renting_space.save!
+
+    redirect_to renting_spaces_path
   end
 
   def edit
@@ -42,6 +44,6 @@ class RentingSpacesController < ApplicationController
   end
 
   def rentingspaces_params
-    params.require(:renting_space).permit(:name)
+    params.require(:renting_space).permit(:name, :address, :amenities, :internet)
   end
 end
