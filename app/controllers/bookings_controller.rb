@@ -1,14 +1,23 @@
 class BookingsController < ApplicationController
+
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @renting_space = RentingSpace.find(params[:renting_space_id])
     @booking = Booking.new
   end
 
   def create
-    @booking = Booking.new(booking_params)
     @renting_space = RentingSpace.find(params[:renting_space_id])
+
+    @booking = Booking.new(booking_params)
     @booking.renting_space = @renting_space
-    @booking.save
+    @booking.user = current_user
+    @booking.save!
+
+    redirect_to bookings_path
   end
 
   private

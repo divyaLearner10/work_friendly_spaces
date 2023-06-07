@@ -1,0 +1,19 @@
+
+<div class="container">
+  <!-- Area to display the movies -->
+  <div class="col-9">
+    <div class="accordion" id="accordionExample">
+      <% @bookings.each do |booking| %>
+
+        <div class="card-body">
+          <h5 class="card-title"><%= booking.renting_space.name %></h5>
+          <p><%= booking.start_date %></p>
+          <p><%= booking.end_date %></p>
+          <p><%= booking.number_of_guests %></p>
+        </div>
+
+
+      <% end %>
+    </div>
+  </div>
+</div>
