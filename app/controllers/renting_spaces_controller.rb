@@ -1,6 +1,6 @@
 class RentingSpacesController < ApplicationController
   before_action :set_renting_space, only: [:show, :edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:home, :index]
+  skip_before_action :authenticate_user!, only: [:home, :index, :new, :create, :show]
 
   def home
     @renting_spaces = RentingSpace.all
