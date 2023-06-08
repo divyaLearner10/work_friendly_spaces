@@ -1,7 +1,10 @@
-<div class="container">
-  <div class="row">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
+
+  <div class="container">
+    <div class="row">
+
     <div class="col-12 col-lg-8">
-      <div class="container my-3">
+      <div class="container" id="renting-space-show">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -29,26 +32,37 @@
 
         <h1 class="mt-3"><%= @renting_space.name %></h1>
         <h4> <i class="fa-solid fa-location-dot"></i> <%= @renting_space.address %> </h4>
-        <p> <%= @renting_space.address %> </p>
+<<<<<<< HEAD
+        <p> £<%=  @renting_space.price%> per night</p>
+        <p> <%=  @renting_space.description%></p>
+      </div>
+    </div>
+=======
+        <p> <%= @renting_space.amenities %> </p>
         <p> Welcome to our luxurious and contemporary flat, located at <%= @renting_space.address %>.
             This stunning residence offers a seamless blend of style and comfort.
             With amenities like <%= @renting_space.amenities %>, and it is in a prime location, this is the perfect place to call home.
             Experience the pinnacle of upscale living in this exquisite abode.</p>
-      </div>
-    </div>
+>>>>>>> 35257621d716e3fc6e5e6768f7a3a76f6d188f3d
 
+    </div>
 
     <div class="col-12 col-lg-4">
-      <div class="container border mb-5 p-4">
-        <h2>Book this place</h2>
-        <a href=<%= new_renting_space_booking_path(@renting_space) %> class="btn btn-primary">Book your Hive</a>
+
+      <% if @renting_space.user === current_user %>
         <%= render "bookings/new"%>
-      </div>
+      <% else %>
+        <div class="container border mb-5 p-4">
+          <%= render "edit"%>
+        </div>
+      <% end %>
+
     </div>
   </div>
+
   <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
