@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_180053) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_070739) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_180053) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "directors", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.text "synopsis"
+    t.bigint "director_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["director_id"], name: "index_movies_on_director_id"
+  end
+
   create_table "renting_spaces", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -39,6 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_180053) do
     t.float "latitude"
     t.float "longitude"
     t.index ["user_id"], name: "index_renting_spaces_on_user_id"
+  end
+
+  create_table "tv_shows", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.text "synopsis"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,5 +84,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_180053) do
 
   add_foreign_key "bookings", "renting_spaces"
   add_foreign_key "bookings", "users"
+  add_foreign_key "movies", "directors"
   add_foreign_key "renting_spaces", "users"
 end
