@@ -1,0 +1,17 @@
+<!-- Booking.New -->
+<div class="container border mb-5 p-4">
+  <h2>Book this Flat</h2>
+
+  <%= simple_form_for([@renting_space, @booking]) do |f| %>
+        <%= f.input :start_date, :label => "Check in" %>
+        <%= f.input :start_date, :label => "Check out" %>
+        <%# <%= f.input :start_date %>
+        <%# <%= f.input :end_date %>
+        <%= f.input :number_of_guests %>
+        <%= f.input :number_of_rooms %>
+        <%# <%= f.input :number_of_rooms %>
+
+        <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+
+</div>
