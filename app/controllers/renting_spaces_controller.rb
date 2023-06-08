@@ -12,7 +12,20 @@ class RentingSpacesController < ApplicationController
   end
 
   def show
+
     @booking = Booking.new
+
+    @renting_spaces = RentingSpace.all
+    # geocoder addition to filter RentingSpaces with coordinates
+    @markers = @renting_spaces.geocoded.map do |renting_space|
+      {
+        lat: renting_space.latitude,
+        lng: renting_space.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { renting_space: renting_space }),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
+
   end
 
   def new
