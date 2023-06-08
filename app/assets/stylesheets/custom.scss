@@ -1,0 +1,129 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$light-color: #f8f9fa;
+
+
+$body-font-family: Arial, sans-serif;
+$heading-font-family: 'Segoe UI', sans-serif;
+
+
+$spacing-unit: 1rem;
+
+
+
+.navbar {
+  background-color: $primary-color;
+}
+
+.navbar-brand img {
+  margin-top: 5px;
+}
+
+.nav-link {
+  color: $light-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $light-color;
+  }
+}
+
+.avatar {
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+
+.container {
+  margin-top: $spacing-unit;
+  text-align: center;
+
+  .sign_up_text {
+    font-family: $heading-font-family;
+    font-size: 2rem;
+    margin-bottom: $spacing-unit;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+
+    .form-label {
+      color: $secondary-color;
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: $spacing-unit;
+    }
+
+    .form-text {
+      color: $secondary-color;
+      font-size: 0.8rem;
+    }
+
+    .btn-primary {
+      background-color: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        border-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  a {
+    color: $secondary-color;
+    font-size: 0.9rem;
+    margin-top: $spacing-unit;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+.footer {
+  background-color: $secondary-color;
+  color: $light-color;
+  padding: $spacing-unit;
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-unit;
+
+    a {
+      color: $light-color;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+
+  .footer-copyright {
+    text-align: center;
+    font-size: 0.8rem;
+
+    i {
+      color: $danger-color;
+    }
+  }
+}
+
+
+.body-color {
+  background-color: $light-color;
+}
