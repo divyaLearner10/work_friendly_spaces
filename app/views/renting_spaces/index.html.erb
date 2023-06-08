@@ -1,3 +1,11 @@
+
+
+<div class="container">
+   <div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 <div class="index-renting-space">
   <div class="container">
   <div class="row">
@@ -16,7 +24,6 @@
             <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
           </div>
           <a href=<%= renting_space_path(renting_space.id) %> class="btn btn-primary">Show more details</a>
-
         </div>
       <% end %>
     </div>
