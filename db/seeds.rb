@@ -29,7 +29,7 @@ user4 = User.create!(email: "christophe@gmail.com", password: "123456")
 users = [user1, user2, user3, user4]
 
 puts 'Creating 50 fake renting_spaces..'
-50.times do
+10.times do
   renting_space = RentingSpace.create!(
     name: Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
