@@ -87,3 +87,4 @@ index = 0
   renting_space.save!
   index += 1
   puts 'Finished!'
+end
