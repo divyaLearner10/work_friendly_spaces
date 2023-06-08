@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_06_08_153645) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_06_08_122653) do
+>>>>>>> 35257621d716e3fc6e5e6768f7a3a76f6d188f3d
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,8 +43,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_08_153645) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+<<<<<<< HEAD
     t.string "description"
     t.integer "price"
+=======
+>>>>>>> 35257621d716e3fc6e5e6768f7a3a76f6d188f3d
     t.index ["user_id"], name: "index_renting_spaces_on_user_id"
   end
 

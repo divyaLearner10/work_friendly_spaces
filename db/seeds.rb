@@ -18,16 +18,13 @@
 # user5 = User.new(first_name: "", last_name: "", email: "", password: "", phone_number: "", address: "")
 # user5.save!
 # puts 'Finished!'
-puts "Cleaning Data Base"
-RentingSpace.destroy_all
-User.destroy_all
-user1 = User.create!(email: "alex@gmail.com", password: "123456")
-user2 = User.create!(email: "kar@gmail.com", password: "123456")
-user3 = User.create!(email: "dyvia@gmail.com", password: "123456")
-user4 = User.create!(email: "christophe@gmail.com", password: "123456")
+require 'faker'
 
-users = [user1, user2, user3, user4]
+puts "Cleaning Database"
+RentingSpace.delete_all
+User.delete_all
 
+<<<<<<< HEAD
 puts 'Creating 15 fake renting_spaces..'
 descriptions = [
   "Situated in the lively streets brimming with artistic energy in the heart of SoHo, New York City, experience the Soho North Meeting Room B!",
@@ -76,4 +73,28 @@ index = 0
   renting_space.save!
   index += 1
   puts 'Finished!'
+=======
+users_data = [
+  { email: "alex@gmail.com", password: "123456" },
+  { email: "kar@gmail.com", password: "123456" },
+  { email: "dyvia@gmail.com", password: "123456" },
+  { email: "christophe@gmail.com", password: "123456" }
+]
+
+users = users_data.map do |user_data|
+  User.create!(user_data)
 end
+
+puts 'Creating 50 fake renting_spaces...'
+10.times do
+  RentingSpace.create!(
+    name: Faker::Company.name,
+    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    amenities: "#{Faker::House.room}, #{Faker::House.furniture}",
+    user_id: users.sample.id,
+    internet: true
+  )
+>>>>>>> 35257621d716e3fc6e5e6768f7a3a76f6d188f3d
+end
+
+puts 'Finished!'
