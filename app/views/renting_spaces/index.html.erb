@@ -13,6 +13,8 @@
               class="card-img-top" alt=<%= renting_space.name %>>
           <div class="card-body">
             <h5 class="card-title"><%= renting_space.name %></h5>
+            <%# <h3 class="card-title"><%= renting_space.description %>
+            <%# <h3 class="card-title">$<%= renting_space.price%>
             <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
           </div>
           <a href=<%= renting_space_path(renting_space.id) %> class="btn btn-primary">Show more details</a>
