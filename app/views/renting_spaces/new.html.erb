@@ -1,3 +1,18 @@
+<h1>Enter Credit Card Details</h1>
+
+<%= form_tag("/credit_cards", method: "post", class: "credit-card-form") do %>
+  <%= label_tag(:card_number, "Card Number:") %>
+  <%= text_field_tag(:card_number) %><br>
+
+  <%= label_tag(:expiration_date, "Expiration Date:") %>
+  <%= text_field_tag(:expiration_date) %><br>
+
+  <%= label_tag(:cvc, "CVC:") %>
+  <%= text_field_tag(:cvc) %><br>
+
+  <%= submit_tag("Submit") %>
+<% end %>
+
 <div class="container">
   <div class="col-md-6">
     <h1>Add a new Hive</h1>

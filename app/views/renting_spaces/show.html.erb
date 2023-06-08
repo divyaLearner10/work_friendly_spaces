@@ -4,7 +4,11 @@
     <div class="row">
 
     <div class="col-12 col-lg-8">
+<<<<<<< HEAD
       <div class="container" id="renting-space-show">
+=======
+
+>>>>>>> master
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -37,19 +41,20 @@
             This stunning residence offers a seamless blend of style and comfort.
             With amenities like <%= @renting_space.amenities %>, and it is in a prime location, this is the perfect place to call home.
             Experience the pinnacle of upscale living in this exquisite abode.</p>
-      </div>
+
     </div>
 
-    <% if @renting_space.user === current_user %>
-      <div class="col-12 col-lg-4">
-        <%= render "bookings/new"%>
-      </div>
-    <% else %>
-      <div class="col-12 col-lg-4">
-        <%= render "edit"%>
-      </div>
-    <% end %>
+    <div class="col-12 col-lg-4">
 
+      <% if @renting_space.user === current_user %>
+        <%= render "bookings/new"%>
+      <% else %>
+        <div class="container border mb-5 p-4">
+          <%= render "edit"%>
+        </div>
+      <% end %>
+
+    </div>
   </div>
 
   <div style="width: 100%; height: 600px;"

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'credit_cards/new'
   devise_for :users
   root to: "renting_spaces#home"
   # root to: "renting_spaces#index"
