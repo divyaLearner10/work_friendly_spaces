@@ -1,18 +1,59 @@
-.cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
+.index-renting-space .container {
+  max-width: 100%;
 }
+
+.index-renting-space .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 18px;
+}
+
+.index-renting-space .card {
+  border-radius: 10px;
+}
+
+
+.index-renting-space .card-title {
+  color: #495579;
+  font-weight: bold;
+  font-family: 'Nunito';
+}
+
+.index-renting-space .card-text {
+  color: #495579;
+  font-weight: bold;
+  font-family: 'Nunito';
+}
+
+.index-renting-space .btn-primary {
+  color: whitesmoke;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bolder;
+  background: linear-gradient(#213555, #5180cb);
+  transition: background 0.3s ease;
+  border: 1px solid #8db4f2;
+}
+
+.index-renting-space .btn-primary:hover {
+  background: linear-gradient(#213555, #5180cb);
+  color: white;
+}
+
+.index-renting-space img {
+  border-radius: 10px;
+}
+
 
 // Smallest device
 @media(max-width: 992px) {
-  .cards {
+  .index-renting-space .cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media(max-width: 768px) {
-  .cards {
+  .index-renting-space .cards {
     grid-template-columns: 1fr;
   }
 }
