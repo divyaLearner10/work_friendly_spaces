@@ -5,10 +5,45 @@ class RentingSpacesController < ApplicationController
   def home
     renting_spaces = RentingSpace.all
     @renting_spaces = renting_spaces[0..3]
+    @images = [
+      "place-1",
+      "place-2",
+      "place-3",
+      "place-4",
+      "place-5",
+      "place-6",
+      "place-7",
+      "place-8",
+      "place-9",
+      "place-10",
+      "place-11",
+      "place-12",
+      "place-13",
+      "place-14",
+      "place-15"
+    ]
   end
 
   def index
     @renting_spaces = RentingSpace.all
+    # @renting_spaces = renting_spaces[0...15]
+    @images = [
+      "place-1",
+      "place-2",
+      "place-3",
+      "place-4",
+      "place-5",
+      "place-6",
+      "place-7",
+      "place-8",
+      "place-9",
+      "place-10",
+      "place-11",
+      "place-12",
+      "place-13",
+      "place-14",
+      "place-15"
+    ]
   end
 
   def show
