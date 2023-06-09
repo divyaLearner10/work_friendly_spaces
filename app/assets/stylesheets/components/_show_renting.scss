@@ -7,3 +7,64 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.rentingspace-show .name-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 34px;
+}
+
+.rentingspace-show .address-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
+}
+
+.rentingspace-show .info-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+}
+
+.rentingspace-show .description-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+}
+
+.rentingspace-show .amenities-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+}
+
+.rentingspace-show .amenities-rentingspace .amenities-list {
+  margin-bottom: 15px;
+}
+
+.map-heading, .amenities-heading {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.rentingspace-show .price-rentingspace {
+  color: white;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+}

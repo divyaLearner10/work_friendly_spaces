@@ -30,12 +30,12 @@
   padding: 8px 24px;
   border-radius: 4px;
   font-weight: bolder;
-  background: linear-gradient(#213555, #5180cb);
+  background: linear-gradient(45deg, #f11f1f, #ec5156);
   transition: background 0.3s ease;
-  border: 1px solid #8db4f2;
+  border: 1px solid #eb4747;
 }
 
 .index-bookings .btn-gradient:hover {
-  background: linear-gradient(#213555, #5180cb);
+  background: linear-gradient(45deg, #f11f1f, #ec5156);
   color: white;
 }
