@@ -25,10 +25,10 @@ RentingSpace.delete_all
 User.delete_all
 
 users_data = [
-  { email: "alex@gmail.com", password: "123456" },
-  { email: "kar@gmail.com", password: "123456" },
-  { email: "dyvia@gmail.com", password: "123456" },
-  { email: "christophe@gmail.com", password: "123456" }
+  { first_name: "Alexandre", last_name: "Almeida", email: "alex@gmail.com", password: "123456" },
+  { first_name: "Karina", last_name: "Basurto", email: "kar@gmail.com", password: "123456" },
+  { first_name: "Divya", last_name: "Savai", email: "divya@gmail.com", password: "123456" },
+  { first_name: "Christophe", last_name: "Deissenberg", email: "christophe@gmail.com", password: "123456" }
 ]
 
 users = users_data.map do |user_data|
