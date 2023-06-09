@@ -6,12 +6,14 @@
         <div class="row no-gutters">
           <div class="col-md-4">
             <% image_urls = [
-                        "https://images.unsplash.com/photo-1556784344-ad913c73cfc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmxhdHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
-                        "https://images.unsplash.com/photo-1479705879471-5afa19ebdcc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZsYXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-                        "https://images.unsplash.com/photo-1582582494705-f8ce0b0c24f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fGZsYXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-                        "https://images.unsplash.com/photo-1581404501824-b69dfb89f64c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGZsYXRzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                        "place.1.jpg",
+                        "place.2.jpg",
+                        "place.3.jpg",
+                        "place.4.jpg",
+                        "place.5.jpg",
+                        "place.6.jpg",
                   ] %>
-                  <% random_index = rand(image_urls.length) %>
+                  <% random_index = rand(image.length) %>
                   <%= image_tag image_urls[random_index], class: "card-img", id: "booking-image" %>
           </div>
           <div class="col-md-8">

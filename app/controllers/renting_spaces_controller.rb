@@ -9,6 +9,7 @@ class RentingSpacesController < ApplicationController
 
   def index
     @renting_spaces = RentingSpace.all
+    @images = []
   end
 
   def show
