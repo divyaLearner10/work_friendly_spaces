@@ -23,6 +23,8 @@
                           class: 'multiple-select'
                         }  %>
             <%= f.input :internet, as: :boolean  %>
+            <%= f.input :price, label: "Price per night($)", input_html: { prefix: "$" } %>
+            <%= f.input :description, as: :text, input_html: { rows: 4 } %>
             <%= f.button :submit, "Add your HIVE", class: "btn btn-primary w-100 renting-space-submit"%>
           <% end %>
         </div>

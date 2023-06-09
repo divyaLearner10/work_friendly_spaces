@@ -33,6 +33,7 @@
           <div class="border-bottom mt-3 mb-3">
             <h2 class="name-rentingspace mt-3"><%= @renting_space.name %> hosted by <%= @renting_space.user.first_name %><%= @renting_space.user.last_name %></h2>
             <h4 class="address-rentingspace"> <i class="fa-solid fa-location-dot"></i> <%= @renting_space.address %> </h4>
+            <h5 class="price-rentingspace"> <i class="fa-solid fa-hand-holding-dollar"></i> $<%= @renting_space.price %> (per night) </h5>
           </div>
 
           <div class="border-bottom mt-3 mb-3 info-rentingspace">
@@ -41,11 +42,7 @@
           </div>
 
           <div class="border-bottom mt-3 mb-3 description-rentingspace">
-            <p> Welcome to our luxurious and contemporary flat, located at <%= @renting_space.address %>.
-                This stunning residence offers a seamless blend of style and comfort.
-                With amenities like <%= @renting_space.amenities %>, and it is in a prime location, this is the perfect place to call home.
-                Experience the pinnacle of upscale living in this exquisite abode.
-            </p>
+            <p> <%= @renting_space.description %> </p>
           </div>
 
           <div class="border-bottom mt-3 amenities-rentingspace">
@@ -54,15 +51,13 @@
               <p> <i class="fa-solid fa-wifi"></i>  High speed internet </p>
             <% end %>
 
-            <% array = @renting_space.amenities %>
+            <% array = @renting_space.amenities.split(",") %>
             <ul class="list-group list-group-horizontal amenities-list">
               <% array.drop(1).each do |item| %>
-                <li class="list-group-item"><%= item %></li>
+                <li class="list-group-item"><%= item.gsub(/[^a-zA-Z0-9\s]/, '') %></li>
               <% end %>
             </ul>
           </div>
-
-
 
         </div>
       </div>
