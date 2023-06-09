@@ -4,18 +4,13 @@
     <div class="cards">
       <% @renting_spaces.each do |renting_space| %>
         <div class="card" >
-          <!--TODO
-          <%= link_to renting_space_path(renting_space.id), class: "card-img" do %>
-            <%= image_tag "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" %>
-          <% end %> -->
-
           <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
               class="card-img-top" alt=<%= renting_space.name %>>
           <div class="card-body">
             <h5 class="card-title"><%= renting_space.name %></h5>
-            <%# <h3 class="card-title"><%= renting_space.description %>
-            <%# <h3 class="card-title">$<%= renting_space.price%>
-            <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
+
+            <p class="card-text mb-1"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
+            <p class="card-title mt-1"><i class="fa-solid fa-hand-holding-dollar"></i> $<%= renting_space.price%></p>
           </div>
           <a href=<%= renting_space_path(renting_space.id) %> class="btn btn-primary">Show more details</a>
         </div>
