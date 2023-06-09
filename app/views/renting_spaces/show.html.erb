@@ -31,7 +31,8 @@
           </div>
 
           <div class="border-bottom mt-3 mb-3">
-            <h2 class="name-rentingspace mt-3"><%= @renting_space.name %> hosted by <%= @renting_space.user.first_name %><%= @renting_space.user.last_name %></h2>
+
+            <h2 class="name-rentingspace mt-3"><%= @renting_space.name %> hosted by<i> <%= @renting_space.user.first_name %> <%= @renting_space.user.last_name %></i></h2>
             <h4 class="address-rentingspace"> <i class="fa-solid fa-location-dot"></i> <%= @renting_space.address %> </h4>
             <h5 class="price-rentingspace"> <i class="fa-solid fa-hand-holding-dollar"></i> $<%= @renting_space.price %> (per night) </h5>
           </div>
@@ -53,7 +54,7 @@
 
             <% array = @renting_space.amenities.split(",") %>
             <ul class="list-group list-group-horizontal amenities-list">
-              <% array.drop(1).each do |item| %>
+              <% array.each do |item| %>
                 <li class="list-group-item"><%= item.gsub(/[^a-zA-Z0-9\s]/, '') %></li>
               <% end %>
             </ul>
