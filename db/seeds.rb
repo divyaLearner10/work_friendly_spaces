@@ -72,11 +72,30 @@ descriptions = [
   Any computer and digital equipment can be provided on request.",
 ]
 
+addresses = [
+  "17 Rue du Faubourg Saint-Honoré, 75008 Paris, France",
+  "1A Princes Street, Edinburgh EH2 2EQ, United Kingdom",
+  "Piazza del Colosseo, 1, Rome, Italy",
+  "Calle de Alcalá, 44, Spain",
+  "Unter den Linden 77, Germany",
+  "3A Trinity Street, Dublin 2, Ireland",
+  "Prinsengracht 263-267, Amsterdam, Netherlands",
+  "Plac Zamkowy 4, Warsaw, Poland",
+  "Karl Johans gate 1, Oslo, Norway",
+  "Vasileos Georgiou I 1, Athens, Greece",
+  "Via dei Fori Imperiali, 00186 Rome, Italy",
+  "Gran Vía, 28013 Madrid, Spain",
+  "Brandenburger Tor, Pariser Platz, 10117 Berlin, Germany",
+  "O'Connell Street, Dublin 1, D01 F5P2, Ireland",
+  "Herengracht 605, 1017 CE Amsterdam, Netherlands"
+]
+
+
 index = 0
 15.times do
   renting_space = RentingSpace.create!(
     name: Faker::Company.name,
-    address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    address: addresses[index],
     amenities: "#{Faker::House.room}, #{Faker::House.furniture}",
     user_id: users.sample.id,  # users.sample.id
     internet: true,
