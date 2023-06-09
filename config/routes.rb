@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "renting_spaces#home"
   # root to: "renting_spaces#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :destroy]
   resources :renting_spaces do
     resources :bookings, only: [:new, :create]
   end

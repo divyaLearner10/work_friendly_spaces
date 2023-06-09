@@ -12,7 +12,6 @@ class RentingSpacesController < ApplicationController
   end
 
   def show
-
     @booking = Booking.new
 
     @renting_spaces = RentingSpace.all
@@ -25,7 +24,6 @@ class RentingSpacesController < ApplicationController
         marker_html: render_to_string(partial: "marker")
       }
     end
-
   end
 
   def new
@@ -35,21 +33,31 @@ class RentingSpacesController < ApplicationController
 
   def create
     @renting_space = RentingSpace.new(rentingspaces_params)
+    @renting_space.amenities = params[:renting_space][:amenities]
     @renting_space.user = current_user
     @renting_space.save!
 
-    redirect_to renting_spaces_path
+    redirect_to renting_space_path(@renting_space)
   end
 
   def edit
   end
 
   def update
-    @renting_space.update(params[:renting_space])
+     amenities = params[:renting_space][:amenities]
+     params[:renting_space][:amenities] = amenities.is_a?(Array) ? amenities[1..amenities.length].join(",") : amenities
+
+    if @renting_space.update(rentingspaces_params)
+      redirect_to renting_space_path(@renting_space)
+    else
+      render :edit
+    end
   end
 
   def destroy
     @renting_space.destroy
+
+    redirect_to renting_spaces_path
   end
 
   private

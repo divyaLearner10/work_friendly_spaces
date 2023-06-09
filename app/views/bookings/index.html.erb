@@ -18,7 +18,7 @@
             <div class="card-body">
               <h4 class="card-title"><%= booking.renting_space.name %></h4>
               <p class="card-text">
-                <%= booking.renting_space.address %>
+                <i class="fa-solid fa-location-dot"></i><%= booking.renting_space.address %>
               </p>
               <p class="card-text">
                 <strong>Check-In: </strong><%= booking.start_date %>
@@ -26,7 +26,7 @@
               <p class="card-text">
                 <p class="card-text"><strong>Check-Out: </strong><%= booking.end_date %></p>
               </p>
-              <%=link_to "Cancel booking", new_renting_space_path, class: "btn btn-gradient" %>
+              <%=link_to "Cancel booking", booking_path(booking), class: "btn btn-gradient", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
             </div>
           </div>
         </div>

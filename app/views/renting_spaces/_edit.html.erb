@@ -1,4 +1,32 @@
-<!-- Edit Renting spaces -->
-<div class="container border mb-5 p-4">
-  <h2>Edit the Hive</h2>
+<div class="container border mb-5 p-4 edit-renting-space">
+  <%= simple_form_for(@renting_space, html: { class: "renting-space-form" }) do |f| %>
+    <% list = ["Kitchen", "Bathroom", "Towels and Linens",
+                "TV and Entertainment", "Heating and Air Conditioning",
+                "Laundry Facilities", "Parking", "Essentials", "Workstation",
+                "Pet-Friendly"] %>
+    <% if @renting_space.amenities.is_a?(Array) %>
+      <% existing_amenities = @renting_space.amenities %>
+    <% else %>
+      <% existing_amenities = @renting_space.amenities.split(",") %>
+    <% end %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :amenities,
+              as: :check_boxes,
+              collection: list.reject(&:empty?),
+              checked: existing_amenities,
+              input_html: {
+                class: 'multiple-select'
+              }  %>
+    <%= f.input :internet, as: :boolean  %>
+    <%= f.button :submit, "Update your HIVE", class: "btn btn-primary w-100 renting-space-submit"%>
+  <% end %>
+</div>
+<div class="container border mb-5 p-4 edit-renting-space">
+  <h3 class="delete-rs-heading">Don't want to host anymore?</h3>
+  <%= link_to "Remove your HIVE",
+      renting_space_path(@renting_space),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+      class: "btn btn-danger w-100 delete-rs-button"
+  %>
 </div>

@@ -10,6 +10,7 @@
 
 .index-renting-space .card {
   border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -28,20 +29,20 @@
 .index-renting-space .btn-primary {
   color: whitesmoke;
   padding: 8px 24px;
-  border-radius: 4px;
+  border-radius: 0 0 10px 10px;
   font-weight: bolder;
-  background: linear-gradient(#213555, #5180cb);
+  background: linear-gradient(45deg,#213555, #2a569c);
   transition: background 0.3s ease;
   border: 1px solid #8db4f2;
 }
 
 .index-renting-space .btn-primary:hover {
-  background: linear-gradient(#213555, #5180cb);
+  background: linear-gradient(45deg,#213555, #2a569c);
   color: white;
 }
 
 .index-renting-space img {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 

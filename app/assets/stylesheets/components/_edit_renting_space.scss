@@ -1,0 +1,65 @@
+.edit-renting-space {
+  background-color: rgb(241, 237, 232);
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.renting-space-form label {
+  color: #1d2f4c;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 18px;
+
+}
+
+.renting-space-form input {
+  background-color: #E6E6E6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.renting-space-form select {
+  background-color: #E6E6E6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.renting-space-form .renting-space-submit {
+  color: whitesmoke;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bolder;
+  background: linear-gradient(45deg, #213555, #5180cb);
+  transition: background 0.3s ease;
+  border: 1px solid #8db4f2;
+}
+
+.renting-space-form .renting-space-submit:hover {
+  background: linear-gradient(45deg, #213555, #5180cb);
+  color: white;
+}
+
+.delete-rs-heading {
+  color: #213555;
+  font-family: 'Nunito';
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(44, 49, 107, 0.2);
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.edit-renting-space .delete-rs-button {
+  color: whitesmoke;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bolder;
+  background: linear-gradient(45deg, #f11f1f, #ec5156);
+  transition: background 0.3s ease;
+  border: 1px solid #eb4747;
+}
+
+.edit-renting-space .delete-rs-button:hover {
+  background: linear-gradient(45deg, #f11f1f, #ec5156);
+  color: white;
+}
