@@ -1,12 +1,12 @@
 <!-- app/views/shared/_flashes.html.erb -->
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
+  <div class="alert alert-info m-1" role="alert" style="text-align: center ; background-color: #F5EFE7;font-size: 15px; font-weight:bold; padding: 10px; border-radius: 5px;  border: solid 2px #f09a06 ">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     <%= notice %>
   </div>
 <% end %>
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
+  <div class="alert alert-warning m-1" role="alert" style="text-align: center; color:#495579; background-color: #F5EFE7;font-size: 15px; font-weight:bold; padding: 10px; border-radius: 5px;  border: solid 2px #f09a06">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     <%= alert %>
   </div>
