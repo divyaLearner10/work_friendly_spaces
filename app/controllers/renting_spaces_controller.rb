@@ -67,6 +67,6 @@ class RentingSpacesController < ApplicationController
   end
 
   def rentingspaces_params
-    params.require(:renting_space).permit(:name, :address, :amenities, :internet)
+    params.require(:renting_space).permit(:name, :address, :amenities, :internet, :price, :description)
   end
 end
