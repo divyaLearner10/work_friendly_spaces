@@ -6,21 +6,21 @@ class RentingSpacesController < ApplicationController
     renting_spaces = RentingSpace.all
     @renting_spaces = renting_spaces[0..3]
     @images = [
-      "place-1",
-      "place-2",
-      "place-3",
-      "place-4",
-      "place-5",
-      "place-6",
-      "place-7",
-      "place-8",
-      "place-9",
-      "place-10",
-      "place-11",
-      "place-12",
-      "place-13",
-      "place-14",
-      "place-15"
+      "place-1.jpg",
+      "place-2.jpg",
+      "place-3.jpg",
+      "place-4.jpg",
+      "place-5.jpg",
+      "place-6.jpg",
+      "place-7.jpg",
+      "place-8.jpg",
+      "place-9.jpg",
+      "place-10.jpg",
+      "place-11.jpg",
+      "place-12.jpg",
+      "place-13.jpg",
+      "place-14.jpg",
+      "place-15.jpg"
     ]
   end
 
@@ -28,21 +28,21 @@ class RentingSpacesController < ApplicationController
     @renting_spaces = RentingSpace.all
     # @renting_spaces = renting_spaces[0...15]
     @images = [
-      "place-1",
-      "place-2",
-      "place-3",
-      "place-4",
-      "place-5",
-      "place-6",
-      "place-7",
-      "place-8",
-      "place-9",
-      "place-10",
-      "place-11",
-      "place-12",
-      "place-13",
-      "place-14",
-      "place-15"
+      "place-1.jpg",
+      "place-2.jpg",
+      "place-3.jpg",
+      "place-4.jpg",
+      "place-5.jpg",
+      "place-6.jpg",
+      "place-7.jpg",
+      "place-8.jpg",
+      "place-9.jpg",
+      "place-10.jpg",
+      "place-11.jpg",
+      "place-12.jpg",
+      "place-13.jpg",
+      "place-14.jpg",
+      "place-15.jpg"
     ]
   end
 
