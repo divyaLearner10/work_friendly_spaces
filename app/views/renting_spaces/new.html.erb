@@ -1,13 +1,13 @@
 <div class="banner-add" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
-  <div class="container">
+  <div class="container mt-1">
     <div class="row">
-      <div class="col-12 col-lg-8" id="description">
+      <div class="col-12 col-lg-6" id="description">
         <h1>Supercharge the Remote Work Experience: <span style="color: #070A52; font-weight: bolder">Add Your Hive to Hivestay!</span></h1>
         <p>Become a driving force in the future of remote work by adding your unique Hive to Hivestay.
           Join our thriving community and offer a space where professionals can find the perfect blend of productivity, comfort, and inspiration.</p>
       </div>
 
-      <div class="col-12 col-lg-4" id="form">
+      <div class="col-12 col-lg-6" id="form">
         <div class="container border mb-5 p-4 add-renting-space">
           <%= simple_form_for(@renting_space, html: { class: "renting-space-form" }) do |f| %>
           <% list = ["Kitchen", "Bathroom", "Towels and Linens",
@@ -29,7 +29,6 @@
           <% end %>
         </div>
       </div>
-
     </div>
   </div>
 </div>
