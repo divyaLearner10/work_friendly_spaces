@@ -1,11 +1,11 @@
 .index-renting-space .container {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .index-renting-space .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 18px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 50px;
 }
 
 .index-renting-space .card {

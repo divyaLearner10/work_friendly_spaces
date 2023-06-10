@@ -1,8 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);">
   <div class="container">
-    <h1>HiveStay: Your Hive Away from Home!</h1>
-    <div class="form">
-    </div>
+    <h1 class="slogan">HiveStay: Your Hive Away from Home!</h1>
   </div>
 </div>
 
@@ -51,24 +49,17 @@
 <div class="rentingspace-section">
   <div class="container">
     <h1>Hivestays We Love</h1>
-
     <div class="card-group">
-      <%# <% @renting_spaces.each do |renting_space| %>
-        <%# <div class="card" style="width: 18rem;">
-          <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlsbGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60"
-                  class="card-img-top" alt=<%= renting_space.name %>
       <% @images.shuffle! %>
         <% @renting_spaces.each_with_index do |renting_space, index| %>
-      <div class="card" >
-            <%= image_tag @images[index], class: "image-top" %>
-            
-            <div class="card-body">
+        <div class="card" >
+          <%= image_tag @images[index], class: "image-top" %>
+          <div class="card-body">
             <h4 class="card-title"><%= renting_space.name %></h4>
             <p class="card-text"><i class="fa-solid fa-location-dot"></i> <%= renting_space.address %></p>
           </div>
         </div>
-        <% end %>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

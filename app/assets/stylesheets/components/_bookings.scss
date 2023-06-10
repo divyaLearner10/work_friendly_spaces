@@ -1,6 +1,14 @@
+.index-bookings h1 {
+  color: #1d2f4c;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  text-align: center;
+}
+
 #booking-card {
-  width: 700px;
-  height: 190px;
+  max-width: 80%;
 }
 
 #booking-image {
