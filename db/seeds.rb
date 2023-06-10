@@ -58,18 +58,7 @@ descriptions = [
 
   "Our Studio is easily accessible by public transportation with a variety of options for nearby parking. The location is also surrounded by numerous restaurants.",
 
-  "Whether you are hosting a small meeting or a large-scale event, this space offers the perfect blend of functionality and style, making it a highly desirable choice for work event planners and organizers.",
-
-  "This is a beautiful work venue, located in the heart of Dalston on Shacklewell Lane, featuring 21 container-like spaces. Pod 4 is the largest space available with a total size of 400 sqft. All office equipment is included",
-
-  "This space is a great opportunity to get networking in the bustling creative hub of the city.",
-
-  "Fully equipped for photography and film bookings the studio includes a make up station and a comfortable client lounge with large meeting table, a kitchen.",
-
-  "Fully equipped work spaces. We believe in providing a practical, technical working environment with great hospitality, complimentary tea, coffee (or Barista coffee for the real caffeine connoisseurs) and 24/7 IT services",
-
-  "It has great daylight and overhead, hanging plants, plush velvet sofa and kitchenette with hand made concrete counter top and a movable meeting table with chairs.
-  Any computer and digital equipment can be provided on request.",
+  "Whether you are hosting a small meeting or a large-scale event, this space offers the perfect blend of functionality and style, making it a highly desirable choice for work event planners and organizers."
 ]
 
 addresses = [
@@ -82,16 +71,11 @@ addresses = [
   "Prinsengracht 263-267, Amsterdam, Netherlands",
   "Plac Zamkowy 4, Warsaw, Poland",
   "Karl Johans gate 1, Oslo, Norway",
-  "Vasileos Georgiou I 1, Athens, Greece",
-  "Via dei Fori Imperiali, 00186 Rome, Italy",
-  "Gran Vía, 28013 Madrid, Spain",
-  "Brandenburger Tor, Pariser Platz, 10117 Berlin, Germany",
-  "O'Connell Street, Dublin 1, D01 F5P2, Ireland",
-  "Herengracht 605, 1017 CE Amsterdam, Netherlands"
+  "Vasileos Georgiou I 1, Athens, Greece"
 ]
 
 index = 0
-15.times do
+10.times do
   renting_space = RentingSpace.create!(
     name: Faker::Company.name,
     address: addresses[index],
